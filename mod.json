@@ -1,0 +1,25 @@
+{
+    "_QPVersion": "0.1.1",
+    "name": "PaintBall",
+    "id": "paintball",
+    "author": "RedBrumbler",
+    "version": "1.0.0",
+    "packageId": "com.AnotherAxiom.GorillaTag",
+    "packageVersion": "1.0.8",
+    "description": "Set other people's color with this mod!\ncopy your own or generate a random one",
+    "type": "Gameplay",
+    "dependencies": [
+        {
+            "id": "MonkeComputer",
+            "version": ">=1.5.1",
+            "downloadIfMissing": "https://github.com/RedBrumbler/MonkeComputer/releases/latest/download/MonkeComputer.qmod"
+        }
+    ],
+	"modFiles": [
+		"libpaintball.so"
+    ],
+    "libraryFiles": [
+    ],
+    "fileCopies": [
+    ]
+}

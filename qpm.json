@@ -1,0 +1,34 @@
+{
+  "sharedDir": "shared",
+  "dependenciesDir": "extern",
+  "info": {
+    "name": "PaintBall",
+    "id": "PaintBall",
+    "version": "0.1.0",
+    "url": null,
+    "additionalData": {}
+  },
+  "dependencies": [
+    {
+      "id": "monkecomputer",
+      "versionRange": "*",
+      "additionalData": {}
+    },
+    {
+      "id": "monkecodegen",
+      "versionRange": "*",
+      "additionalData": {}
+    },
+    {
+      "id": "beatsaber-hook",
+      "versionRange": "*",
+      "additionalData": {}
+    },
+    {
+      "id": "custom-types",
+      "versionRange": "^0.8.3",
+      "additionalData": {}
+    }
+  ],
+  "additionalData": {}
+}

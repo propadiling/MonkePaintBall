@@ -1,0 +1,9 @@
+extern/
+libs/
+obj/
+*.log
+*.txt
+qpm.shared.json
+*.backup
+*.zip
+*.qmod
