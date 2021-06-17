@@ -24,6 +24,7 @@ namespace GorillaUI::BaseGameInterface::PlayerColor {
 using namespace UnityEngine;
 
 extern bool allowPaintBall;
+static int cooldown = 0;
 
 namespace PaintBall
 {
@@ -31,6 +32,7 @@ namespace PaintBall
     {
         using namespace GlobalNamespace;
 
+        if (cooldown > 0) cooldown--;
         rightInput = OVRInput::Get(OVRInput::Button::PrimaryIndexTrigger, OVRInput::Controller::RTouch);
         leftInput = OVRInput::Get(OVRInput::Button::PrimaryIndexTrigger, OVRInput::Controller::LTouch);
 
@@ -83,8 +85,11 @@ namespace PaintBall
             static Il2CppString* initializeNoobMaterial = il2cpp_utils::newcsstr<il2cpp_utils::CreationType::Manual>("InitializeNoobMaterial");
             VRRig* rig = obj->GetComponentInParent<GlobalNamespace::VRRig*>();
             
-            if (config.monkemode != 1 && rig) // just gorilla or all
+            // cooldown for gorillas so that we dont spam network messages
+            if (config.monkemode != 1 && rig && !cooldown) // just gorilla or all
             {
+                // about a second of delay
+                cooldown = 100;
                 PhotonView* photonview = PhotonView::Get(rig);
                 photonview->RPC(initializeNoobMaterial, RpcTarget::All, GorillaUI::BaseGameInterface::PlayerColor::get_colorArray(color.r, color.g, color.b));
             }
