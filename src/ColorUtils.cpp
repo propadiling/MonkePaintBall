@@ -12,7 +12,7 @@ namespace ColorUtils
 
         Color result = HSVtoRGB(h, 1.0f, 1.0f);
 
-        int r = rand() % 6;
+        int r = rand() % 8;
         int m = rand() % 20;
         float mul = (1.0f + ((float)m / 10.0f));
 
@@ -39,9 +39,12 @@ namespace ColorUtils
                 result.g *= mul;
                 result.b *= mul;
                 break;
+            case 6:
+                result.r *= mul;
+                result.g *= mul;
+                result.b *= mul;
             default:
                 break;
-                
         }
 
         return result;
@@ -95,6 +98,6 @@ namespace ColorUtils
                 b = (float)(rand() % 100) / 100.0f;
         }
 
-        return Color(r + m, g + m, b + m);
+        return Color(r + m, g + m, b + m, 1.0f);
     }
 }
