@@ -7,6 +7,7 @@
     "packageId": "com.AnotherAxiom.GorillaTag",
     "packageVersion": "1.0.8",
     "description": "Set other people's color with this mod!\ncopy your own or generate a random one",
+    "coverImage": "cover.png",
     "type": "Gameplay",
     "dependencies": [
         {
